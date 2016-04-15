@@ -1,6 +1,6 @@
-[![MQ9](ADC121C_I2CGAS_MQ9.png)](https://www.controleverything.com/content/Gas?sku=ADC121C_I2CGAS_MQ9)
-# MQ9
-MQ9 Gas Sensor.
+[![ADC121C_MQ9](ADC121C_I2CGAS_MQ9.png)](https://www.controleverything.com/content/Gas?sku=ADC121C_I2CGAS_MQ9)
+# ADC121C_MQ9
+ADC121C_MQ9 Gas Sensor.
 
 The MQ9 is capable of sensing carbon monoxide and combustible gas concentration levels.
 
@@ -19,12 +19,12 @@ Download (or git pull) the code in pi.
 
 Compile the java program.
 ```cpp
-$> pi4j MQ9.java
+$> pi4j ADC121C_MQ9.java
 ```
 
 Run the java program.
 ```cpp
-$> pi4j MQ9
+$> pi4j ADC121C_MQ9
 ```
 
 ## Python
@@ -35,7 +35,7 @@ https://pypi.python.org/pypi/smbus-cffi/0.5.1
 Download (or git pull) the code in pi. Run the program.
 
 ```cpp
-$> python MQ9.py
+$> python ADC121C_MQ9.py
 ```
 
 ## Arduino

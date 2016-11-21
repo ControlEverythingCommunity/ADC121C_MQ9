@@ -42,10 +42,15 @@ void loop()
   
   // Convert the data to 12-bits
   int raw_adc = ((data[0] & 0x0F) * 256) + data[1];
-  float ppm = (1000.0 / 4096.0) * raw_adc + 10.0;
-  
-  // Output data to serial monitor
-  Serial.print("Carbon Monoxide Concentration : ");
-  Serial.println(ppm);
-  delay(300);
+  float sensor_voltage = raw_adc / 1024.0 * 5.0;
+  float RS_gas = (5.0 - sensor_voltage) / sensor_voltage;
+  float ratio = RS_gas / 3.78;
+
+  Serial.print("Sensor Voltage = ");
+  Serial.print(sensor_voltage);
+  Serial.println("V");
+
+  Serial.print("Concentration = ");
+  Serial.println(ratio);
+  delay(1000);
 }
